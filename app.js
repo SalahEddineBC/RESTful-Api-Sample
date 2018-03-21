@@ -1,0 +1,10 @@
+var express = require("express");
+var app = express();
+var db = require("./db");
+var UserController = require("./UserController");
+var EntrepriseController = require("./EntrepriseController");
+var EtudiantController = require("./EtudiantController");
+app.use("/users", UserController);
+app.use("/Enterprise", EntrepriseController);
+app.use("/Etudiant", EtudiantController);
+module.exports = app;
